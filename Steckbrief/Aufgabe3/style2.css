@@ -1,38 +1,28 @@
 
-.half-circle {
-    position: absolute;
-    margin-top: -300px;
-    text-align: center;
-    top: 0px;
-    left: 480px;
-    width: 400px;
-    height: 200px;
-    border-radius: 400px 400px 0 0;
-    background-color: lightblue;
-    z-index: -10;
-    background-color: #a20000;
-    transform-origin: bottom center;
-    transform: rotate(180deg);
-   
-  }
 
-li {
+lli {
     
-    text-decoration: none;
-    display: inline;
-    background-color: rgba(0, 0, 0, 0.986);
-    padding: 10px 0;
-    margin: 0;
-    padding-left: 50px;
-    padding-right: 50px;
-    position: absolute;
-    color: white;
-    top: 0px;
-    left: 850px;
-    border-radius: 5px;
+  text-decoration: none;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.986);
+  padding: 10px 0;
+  margin: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: absolute;
+  color: white;
+  top: 0px;
+  left: 850px;
+  border-radius: 5px;
+  z-index: -5px;
 
 }
 
+li a {
+
+text-decoration: none;
+color: aliceblue;
+}
 div {
 
     width: 800px;
