@@ -4,33 +4,35 @@ head img{
   margin-right: 480px;
   
   }
-  
-  header p{
-  
-  color:#006680;
-  font-size: xx-large;
-  font-family: sans-serif;
-  
-  }
 
-
+  .icon{
+    position: absolute;
+    bottom: 540px;
+    left: 944px;
+    opacity: 0.8;
+    max-width: 3%;
+    height: auto;
+}
 
 ul {
   list-style-type: none;
   margin-top: 300;
-  margin-left: 950px;
+  margin-left: 1000px;
   top:0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  position: absolute;
+  position: fixed;
   border-radius: 5px;
   
 
 }
 
 li {
-  float: left;
+  float: right;
+  border-right: solid 1px white;
+  background: black;
+  padding: 5px 8px 5px 5px;
   
 }
 
@@ -47,17 +49,31 @@ li a:hover {
   background-color: red;
 }
 
+
+li a.aktiv{
+  color: orange;
+  font-weight: 1000;
+}
+
+.Navigation {
+  position: sticky;
+  right: 0;
+    top: 0;
+  
+  }
+
 main p {
 
   color:#006680;
   font-size: xx-large;
+  font-family: sans-serif;
 }
+
 
 {
   background-color: #f60;
   } 
 
-}
 
 li a {
 

@@ -1,52 +1,64 @@
+.icon{
+  position: absolute;
+  bottom: 540px;
+  left: 940px;
+  opacity: 0.8;
+  max-width: 3%;
+  height: auto;
+}
+
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    margin-left: 850px;
-    top:0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    border-radius: 5px;
-    
+  list-style-type: none;
+  margin-top: 300;
+  margin-left: 1000px;
+  top:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  border-radius: 5px;
   
-  }
-  
-  li {
-    float: left;
-    
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: red;
-  }
-  
-  {
-    background-color: #f60;
-    } 
-  
-  }
-  
-  li a {
-  
-    text-decoration: none;
-    color: aliceblue;
-  }
 
 }
+
+li {
+  float: right;
+  border-right: solid 1px white;
+  background: black;
+  padding: 5px 8px 5px 5px;
+  
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-right: white;
+}
+
+li a:hover {
+  background-color: red;
+}
+
+
+li a.aktiv{
+  color: orange;
+  font-weight: 1000;
+}
+
+.Navigation {
+  position: fixed;
+  right: 0;
+    top: 0;
+  }
 
 .title{
   margin: 0 auto;
   width: 50%;
-  text-align: center;
+  text-align: left;
   padding-bottom: 10px;
   font-size: 42px;
   color: white;
@@ -60,8 +72,6 @@ ul {
 }
 
 
-
-
 .email {
   background-color: lightgrey;  
   border-bottom: 5px solid lightgrey;
@@ -69,18 +79,6 @@ ul {
   width:300px;
   
 }
-
-.message {   
-  background-color: lightgrey;
-  border-bottom: 5px solid lightgrey;
-  overflow: hidden;
-  height: 100px;  
-  width:300px;
-}
-
-
-
-
 .submit{
   border-radius:5px;
   padding:10px;
@@ -89,9 +87,8 @@ ul {
   border-bottom: 5px solid lightgrey; 
   transform: translateY(-120px); 
 
+
 }
-
-
 
 .entry{
   display: block;
@@ -110,8 +107,23 @@ ul {
   background-color: lightgrey;  
   border: none;
   border-bottom: 5px solid lightgrey; 
-  margin-top: 150px; 
+  margin-top: 130px; 
+
 
 }
 
-  
+main div {
+
+text-align: left;
+width: 800px;
+
+}
+
+main div p{
+
+text-align: left;
+font-family: sans-serif;
+color: #006680;
+}
+
+

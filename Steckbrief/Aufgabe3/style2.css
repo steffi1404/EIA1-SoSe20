@@ -1,28 +1,61 @@
-
-
-lli {
-    
-  text-decoration: none;
-  display: inline;
-  background-color: rgba(0, 0, 0, 0.986);
-  padding: 10px 0;
-  margin: 0;
-  padding-left: 50px;
-  padding-right: 50px;
+.icon{
   position: absolute;
-  color: white;
-  top: 0px;
-  left: 850px;
-  border-radius: 5px;
-  z-index: -5px;
+  bottom: 540px;
+  left: 940px;
+  opacity: 0.8;
+  max-width: 3%;
+  height: auto;
+}
 
+
+ul {
+  list-style-type: none;
+  margin-top: 300;
+  margin-left: 1000px;
+  top:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  border-radius: 5px;
+  
+
+}
+
+li {
+  float: right;
+  border-right: solid 1px white;
+  background: black;
+  padding: 5px 8px 5px 5px;
+  
 }
 
 li a {
-
-text-decoration: none;
-color: aliceblue;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-right: white;
 }
+
+li a:hover {
+  background-color: red;
+}
+
+
+li a.aktiv{
+  color: orange;
+  font-weight: 1000;
+}
+
+.Navigation {
+  position: fixed;
+  right: 0;
+    top: 0;
+  }
+
+
 div {
 
     width: 800px;
