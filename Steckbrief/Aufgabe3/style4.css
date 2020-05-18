@@ -1,7 +1,7 @@
 .icon{
   position: absolute;
   bottom: 540px;
-  left: 953px;
+  left: 947px;
   opacity: 0.8;
   max-width: 3%;
   height: auto;
@@ -70,7 +70,7 @@ h3 {
   color: #006680;
   font-size: bolder;
   text-align: left;
-  font-size: large;
+  font-size: x-large;
   }
 
 input[type=text], select, textarea {
