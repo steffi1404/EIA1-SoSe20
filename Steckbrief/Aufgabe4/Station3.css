@@ -39,4 +39,9 @@
         color: whitesmoke;
         left: 540px;}
 
+        @font-face {
+            src: url(fonts/jellyka_delicious_cake-webfont.woff2);
+            font-family: jelly; 
+        }
+
     
