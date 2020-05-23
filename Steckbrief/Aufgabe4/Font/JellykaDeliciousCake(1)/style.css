@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "JellykaDeliciousCake";
+  src: url("./fonts/JellykaDeliciousCake.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/JellykaDeliciousCake.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/JellykaDeliciousCake.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/JellykaDeliciousCake.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/JellykaDeliciousCake.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/JellykaDeliciousCake.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/JellykaDeliciousCake.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
