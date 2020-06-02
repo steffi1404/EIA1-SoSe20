@@ -1,4 +1,4 @@
-//*Alle Emissionswerte der Kontinente von 2008/2018 (Werte aus Tabelle)....................................................................*//
+//*Alle Emissionswerte der Kontinente von 2008/2018 (Werte aus Tabelle)----------------------------------------------------------------------*//
 var Europa08 = 4965.7;
 var Europa18 = 4209.3;
 
@@ -17,11 +17,12 @@ var Asia18 = 16274.1;
 var Australia08 = 1993;
 var Australia18 = 2100.5;
 
+//*Gesamte Emissionswerte der Kontinente aus dem Jahr 2018-----------------------------------------------------------------------------------*//
 var Gesamt = Europa18 + Africa18 + SouthAmerica18 + NorthAmerica18 + Asia18 + Australia18;
 
 
 
-//*Europa..................................................................................................................................*//
+//*Europa------------------------------------------------------------------------------------------------------------------------------------*//
 console.log("Europa");
 console.log("Die Emission von Europa ist:" + Europa18 + "kg CO2");
 console.log("Relativ zur Gesamtemisson der Welt verursacht Europa damit" + (Europa18 / Gesamt * 100) + "%");
@@ -31,7 +32,7 @@ console.log("2018 im Vergleich zu 2008 sind das" + (Europa18 - Europa08) + "kg C
 
 
 
-//*Africa..................................................................................................................................*//
+//*Africa------------------------------------------------------------------------------------------------------------------------------------*//
 console.log("Africa");
 console.log("Die Emission von Africa ist:" + Africa18 + "kg CO2");
 console.log("Relativ zur Gesamtemisson der Welt verursacht Africa damit" + (Africa18 / Gesamt * 100) + "%");
@@ -40,7 +41,7 @@ console.log("2018 im Vergleich zu 2008 sind das" + (Africa18 - Africa08) + "kg C
 
 
 
-//*Asia....................................................................................................................................*//
+//*Asia--------------------------------------------------------------------------------------------------------------------------------------*//
 console.log("Asia");
 console.log("Die Emission von Asia ist:" + Asia18 + "kg CO2");
 console.log("Relativ zur Gesamtemisson der Welt verursacht Asia damit" + (Asia18 / Gesamt * 100) + "%");
@@ -49,7 +50,7 @@ console.log("2018 im Vergleich zu 2008 sind das" + (Asia18 - Asia08) + "kg CO2")
 
 
 
-//*Australia.............................................................................................................................. *//
+//*Australia---------------------------------------------------------------------------------------------------------------------------------*//
 console.log("Australia");
 console.log("Die Emission von Australia ist:" + Australia18 + "kg CO2");
 console.log("Relativ zur Gesamtemisson der Welt verursacht Australia damit" + (Australia18 / Gesamt * 100) + "%");
@@ -59,7 +60,7 @@ console.log("2018 im Vergleich zu 2008 sind das" + (Australia18 - Australia08) +
 
 
 
-//*North America...........................................................................................................................*//
+//*North America-----------------------------------------------------------------------------------------------------------------------------*//
 console.log("North America");
 console.log("Die Emission von North America ist:" + NorthAmerica18 + "kg CO2");
 console.log("Relativ zur Gesamtemisson der Welt verursacht North America damit" + (NorthAmerica18 / Gesamt * 100) + "%");
@@ -67,7 +68,7 @@ console.log("Für North America hat sich 2018 im Vergleich zu 2008 die Emission 
 console.log("2018 im Vergleich zu 2008 sind das" + (NorthAmerica18 - NorthAmerica08) + "kg CO2");
 
 
-//*South America.......................................................................................................................... *//
+//*South America-----------------------------------------------------------------------------------------------------------------------------*//
 console.log("South America");
 console.log("Die Emission von South America ist:" + SouthAmerica18 + "kg CO2");
 console.log("Relativ zur Gesamtemisson der Welt verursacht South America damit" + (SouthAmerica18 / Gesamt * 100) + "%");
