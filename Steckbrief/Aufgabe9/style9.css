@@ -69,7 +69,7 @@ body {
 
 .lineThrough {
   text-decoration: line-through;
-  color: #000000;
+  color: #1c6306;
 }
 
 .item i.de {
@@ -96,15 +96,15 @@ body {
   height: 40px;
   width: 350px;
   background-color: transparent;
-  color: black;
+  color: rgb(69, 3, 78);
   border: transparent;
   font-size: 20px;
   padding-left: 10px;
 }
 
 .add-to-do input::-webkit-input-placeholder {
-  color: black;
-  font-family: "Gill Sans", sans-serif;
+  color: rgb(72, 14, 87);
+  font-family: Forte;
   font-size: 15px;
 }
 
