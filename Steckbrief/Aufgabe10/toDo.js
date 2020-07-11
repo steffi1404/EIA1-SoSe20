@@ -1,8 +1,17 @@
 "use strict";
 var todoObjects = [
-    { todosText: "Prüfungsvorbereitung", todosChecked: true },
-    { todosText: "EIA", todosChecked: false },
-    { todosText: "Sport", todosChecked: false }
+    {
+        todosText: "Prüfungsvorbereitung",
+        todosChecked: true
+    },
+    {
+        todosText: "EIA",
+        todosChecked: false
+    },
+    {
+        todosText: "Sport",
+        todosChecked: false
+    }
 ];
 var inputDOMElement;
 var addButtonDOMElement;
@@ -38,7 +47,6 @@ function drawListToDOM() {
     }
     updateCounter();
 }
-//COUNTER//
 function updateCounter() {
     let i = 0;
     let checkmark = 0;
@@ -66,9 +74,40 @@ function toggleCheckState(index) {
     todoObjects[index].todosChecked = !todoObjects[index].todosChecked;
     drawListToDOM();
 }
-//DELETE//
 function deleteTodo(index) {
     todoObjects.splice(index, 1);
     drawListToDOM();
 }
+window.addEventListener("load", function () {
+    const artyom = new Artyom();
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i, wildcard) {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            todoObjects.unshift({
+                todosText: wildcard,
+                todosChecked: false
+            });
+            drawListToDOM();
+        }
+        //drawListToDOM();
+        //todosDOMElement.innerHTML = wildcard;
+    });
+    function startContinuousArtyom() {
+        artyom.fatality();
+        setTimeout(function () {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            }).then(function () {
+                console.log("Ready!");
+            });
+        }, 250);
+    }
+    startContinuousArtyom();
+});
 //# sourceMappingURL=toDo.js.map

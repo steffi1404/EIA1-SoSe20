@@ -1,10 +1,15 @@
 body {
     font-family: Verdana;
-    background: rgb(185, 185, 185)
+    background: rgb(212, 212, 212)
 }
 
 .h1 {
-color: black;
+color: rgb(27, 68, 68);
+}
+
+.p {
+color:rgb(27, 68, 68);
+
 }
 
 main {
@@ -15,15 +20,15 @@ main {
 }
 
 #counter {
-    color: black
+    color: rgb(27, 68, 68);
 }
 
 #counterDone{
-    color: black
+    color: rgb(27, 68, 68);
 }
 
 #counterTodo{
-    color: black
+    color: rgb(27, 68, 68);
 }
 
 .inputGroup {

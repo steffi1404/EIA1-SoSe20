@@ -4,11 +4,18 @@ interface Task {
 }
 
 var todoObjects: Task [] = [
-    {todosText: "Prüfungsvorbereitung", todosChecked: true},
-    
-    {todosText: "EIA", todosChecked: false},
-    
-    {todosText: "Sport", todosChecked: false}
+    {
+        todosText: "Prüfungsvorbereitung",
+        todosChecked: true
+    },
+    {
+        todosText: "EIA",
+        todosChecked: false
+    },
+    {
+        todosText: "Sport",
+        todosChecked: false
+    }
 ];
 
 
@@ -20,9 +27,9 @@ var counterDoneDOMElement: HTMLElement;
 var counterTodoDOMElement: HTMLElement;
 
 
-
 window.addEventListener("load", function(): void {
 
+   
     inputDOMElement = document.querySelector("#inputTodo");
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
@@ -30,28 +37,32 @@ window.addEventListener("load", function(): void {
     counterDoneDOMElement = document.querySelector("#counterDone");
     counterTodoDOMElement = document.querySelector("#counterTodo");
 
+
+
     addButtonDOMElement.addEventListener("click", addTodo);
 
-    drawListToDOM(); });
-
-
+    
+    drawListToDOM();
+});
 
 function drawListToDOM(): void {
+    
     todosDOMElement.innerHTML = "";
 
-    
+   
     for (let index: number = 0; index < todoObjects.length; index++) {
-        
         
         let todo: HTMLElement = document.createElement("div");
         todo.classList.add("todo");
 
+       
         todo.innerHTML =  "<span class='check " + todoObjects[index].todosChecked + "'><i class='fas fa-check'></i></span>"
                             + todoObjects[index].todosText +
                             "<span class='trash fas fa-trash-alt'></span>";
 
+        
         todo.querySelector(".check").addEventListener("click", function(): void {
-            
+           
             toggleCheckState(index);
         
         });
@@ -60,16 +71,13 @@ function drawListToDOM(): void {
             deleteTodo(index);
         });
 
-
         todosDOMElement.appendChild(todo);
     }
-
 
     updateCounter();
 }
 
 
-//COUNTER//
 function updateCounter(): void {
 
     let i: number = 0;	
@@ -82,36 +90,41 @@ function updateCounter(): void {
     }
 
     counterDoneDOMElement.innerHTML = checkmark + " erledigt"; 
+
     counterDOMElement.innerHTML = todoObjects.length + " insgesamt";
+
     counterTodoDOMElement.innerHTML = todoObjects.length - checkmark + " offen";
 }
 
+
+
 function addTodo(): void {
-   
+    
+    
     if (inputDOMElement.value != "") {
-        
-        
+    
         todoObjects.unshift({
             todosText: (inputDOMElement.value),
             todosChecked: false
         });
         
+        
+       
         inputDOMElement.value = "";
 
-        
         drawListToDOM();
     }
 }
 
+
 function toggleCheckState(index: number): void {
 
-    
+
     todoObjects[index].todosChecked = ! todoObjects[index].todosChecked;
-    
+
     drawListToDOM();
 }
 
-//DELETE//
 function deleteTodo(index: number): void {
 
     todoObjects.splice(index, 1);
@@ -119,3 +132,49 @@ function deleteTodo(index: number): void {
     drawListToDOM();
 }
 
+
+declare var Artyom: any;
+
+window.addEventListener("load", function(): void {
+    const artyom: any = new Artyom();
+    
+    artyom.addCommands ( {
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function(i: any, wildcard: string): void {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            todoObjects.unshift({
+                todosText: wildcard,  
+                todosChecked: false
+            
+            });
+            drawListToDOM();
+        }
+        //drawListToDOM();
+        //todosDOMElement.innerHTML = wildcard;
+
+
+    });
+    
+    function startContinuousArtyom(): void {
+        artyom.fatality();
+    
+        setTimeout(
+            function(): void {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function(): void {
+                    console.log("Ready!");
+                });
+            }, 
+            250);
+    }
+    
+    startContinuousArtyom();
+    
+
+});
